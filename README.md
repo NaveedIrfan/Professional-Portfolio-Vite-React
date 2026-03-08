@@ -57,4 +57,4 @@ This project is open-source. Feel free to use it as inspiration for your own por
 Built with ❤️ by [Naveed Irfan](https://github.com/NaveedIrfan)
 
 
-[Alt text](Banner.jpg)
+[Project Thumbnail](Banner.jpg)
