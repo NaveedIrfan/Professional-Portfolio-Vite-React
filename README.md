@@ -31,7 +31,8 @@ To run this project locally, follow these steps:
    ```
 
 2. **Navigate to the directory**:
-   ```bash
+   ```bash![Untitled-1](https://github.com/user-attachments/assets/0cdba1b5-6772-49f3-8de3-c0c521dc083e)
+
    cd Portfolio
    ```
 
