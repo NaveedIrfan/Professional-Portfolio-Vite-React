@@ -28,22 +28,23 @@ const Hero = () => {
                 opacity: 0.4
             }}></div>
 
-            <div className="container" style={{
+            <div className="container hero-grid" style={{
                 display: 'grid',
                 gridTemplateColumns: '1.2fr 0.8fr',
                 gap: '4rem',
                 alignItems: 'center'
             }}>
                 <motion.div
+                    className="hero-text"
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                 >
                     <h2 style={{ color: 'var(--primary)', marginBottom: '1rem', fontSize: '1.2rem', fontWeight: 600 }}>{hero.greeting}</h2>
-                    <h1 style={{ fontSize: '4.5rem', lineHeight: '1.1', marginBottom: '1.5rem' }}>
+                    <h1 className="hero-title" style={{ fontSize: '4.5rem', lineHeight: '1.1', marginBottom: '1.5rem' }}>
                         I'm <span style={{ color: 'var(--secondary)' }}>{hero.name}</span>
                     </h1>
-                    <h3 style={{ fontSize: '2rem', color: 'var(--text-primary)', marginBottom: '2rem' }}>
+                    <h3 className="hero-subtitle" style={{ fontSize: '2rem', color: 'var(--text-primary)', marginBottom: '2rem' }}>
                         <span style={{ color: '#ef4444' }}>{hero.role}</span>
                     </h3>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2.5rem', maxWidth: '600px' }}>
@@ -55,7 +56,7 @@ const Hero = () => {
                             onClick={() => window.location.href = "/projects"}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="glass"
+                            className="glass hero-btn"
                             style={{
                                 padding: '1rem 2rem',
                                 background: 'var(--primary)',
@@ -82,8 +83,8 @@ const Hero = () => {
                     style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}
                 >
                     <div style={{
-                        width: '400px',
-                        height: '400px',
+                        width: 'min(400px, 80vw)',
+                        height: 'min(400px, 80vw)',
                         borderRadius: '50%',
                         background: 'var(--secondary)',
                         display: 'flex',

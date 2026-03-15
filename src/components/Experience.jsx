@@ -19,7 +19,7 @@ const Experience = () => {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="glass"
+                            className="glass experience-grid"
                             style={{
                                 padding: '2rem',
                                 marginBottom: '2rem',

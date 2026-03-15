@@ -6,6 +6,8 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
@@ -55,10 +57,41 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Menu Toggle */}
-                <div style={{ display: 'none' }} className="mobile-toggle">
-                    {/* Styles will handle visibility */}
+                <div style={{ display: 'none' }} className="mobile-toggle" onClick={toggleMenu}>
+                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </div>
             </div>
+
+            {/* Mobile Menu */}
+            {isMenuOpen && (
+                <div className="glass" style={{
+                    position: 'absolute',
+                    top: '100%',
+                    left: 0,
+                    width: '100%',
+                    padding: '1rem 0',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '1.5rem',
+                    borderTop: 'none',
+                    borderTopLeftRadius: 0,
+                    borderTopRightRadius: 0
+                }}>
+                    {navLinks.map((link) => (
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            style={{ fontWeight: '500', color: 'var(--text-secondary)', fontSize: '1.2rem' }}
+                            onClick={() => setIsMenuOpen(false)}
+                            onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
+                            onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+                        >
+                            {link.name}
+                        </a>
+                    ))}
+                </div>
+            )}
         </nav>
     );
 };

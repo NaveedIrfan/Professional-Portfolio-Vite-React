@@ -60,9 +60,9 @@ const ProjectsPage = () => {
                     </div>
                 </motion.div>
 
-                <div style={{
+                <div className="projects-grid" style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
                     gap: '2.5rem'
                 }}>
                     {projects.items.map((project, index) => (

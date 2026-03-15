@@ -10,7 +10,7 @@ const About = () => {
             <div className="container">
                 <h2 className="section-title">About Me</h2>
 
-                <div style={{
+                <div className="about-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr',
                     gap: '4rem',
