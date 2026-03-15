@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import portfolioData from '../data/portfolioData.json';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +36,7 @@ const Navbar = () => {
                     color: 'var(--text-primary)',
                     fontFamily: 'var(--font-signature)'
                 }}>
-                    Naveed <span style={{ color: 'var(--primary)' }}>Irfan</span>
+                    {portfolioData.header.firstName} <span style={{ color: 'var(--primary)' }}>{portfolioData.header.lastName}</span>
                 </a>
 
                 {/* Desktop Menu */}

@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Phone, MapPin } from 'lucide-react';
+import portfolioData from '../data/portfolioData.json';
 
 const Contact = () => {
+    const { contact } = portfolioData;
+
     return (
         <section id="contact" style={{ paddingBottom: '120px' }}>
             <div className="container">
@@ -18,9 +21,9 @@ const Contact = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>Let's discuss your next project</h3>
+                        <h3 style={{ fontSize: '1.8rem', marginBottom: '1.5rem' }}>{contact.subtitle}</h3>
                         <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem' }}>
-                            I am currently open for new opportunities and collaborations. Feel free to reach out through any of the channels below!
+                            {contact.description}
                         </p>
 
                         <div style={{
@@ -30,14 +33,14 @@ const Contact = () => {
                             alignItems: 'center',
                             justifyContent: 'center'
                         }}>
-                            <ContactInfo icon={<Mail size={20} />} label="Email" value="naveedirfan890@gmail.com" />
+                            <ContactInfo icon={<Mail size={20} />} label="Email" value={contact.info.email} />
                             <ContactInfo
                                 icon={<Linkedin size={20} />}
                                 label="LinkedIn"
-                                value="Naveed Irfan"
-                                link="https://www.linkedin.com/in/naveed-irfan-110a37251"
+                                value={contact.info.linkedinLabel}
+                                link={contact.info.linkedin}
                             />
-                            <ContactInfo icon={<MapPin size={20} />} label="Location" value="Swat, Pakistan" />
+                            <ContactInfo icon={<MapPin size={20} />} label="Location" value={contact.info.location} />
                         </div>
                     </motion.div>
                 </div>

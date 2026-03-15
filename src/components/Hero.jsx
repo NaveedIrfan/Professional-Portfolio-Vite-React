@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Github, Mail } from 'lucide-react';
+import portfolioData from '../data/portfolioData.json';
 
 const Hero = () => {
+    const { hero, header } = portfolioData;
+
     return (
         <section id="home" style={{
             minHeight: '100vh',
@@ -36,19 +39,20 @@ const Hero = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <h2 style={{ color: 'var(--primary)', marginBottom: '1rem', fontSize: '1.2rem', fontWeight: 600 }}>Hi There,</h2>
+                    <h2 style={{ color: 'var(--primary)', marginBottom: '1rem', fontSize: '1.2rem', fontWeight: 600 }}>{hero.greeting}</h2>
                     <h1 style={{ fontSize: '4.5rem', lineHeight: '1.1', marginBottom: '1.5rem' }}>
-                        I'm <span style={{ color: 'var(--secondary)' }}>Naveed Irfan</span>
+                        I'm <span style={{ color: 'var(--secondary)' }}>{hero.name}</span>
                     </h1>
                     <h3 style={{ fontSize: '2rem', color: 'var(--text-primary)', marginBottom: '2rem' }}>
-                        <span style={{ color: '#ef4444' }}>Aspiring IT Professional</span>
+                        <span style={{ color: '#ef4444' }}>{hero.role}</span>
                     </h3>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', marginBottom: '2.5rem', maxWidth: '600px' }}>
-                        Building dynamic web applications and exploring the intersection of AI, Data, and Creative Design.
+                        {hero.description}
                     </p>
 
                     <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
                         <motion.button
+                            onClick={() => window.location.href = "/projects"}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="glass"
@@ -65,8 +69,8 @@ const Hero = () => {
                         </motion.button>
 
                         <div style={{ display: 'flex', gap: '1rem' }}>
-                            <SocialIcon icon={<Linkedin size={20} />} href="https://www.linkedin.com/in/naveed-irfan-110a37251" />
-                            <SocialIcon icon={<Github size={20} />} href="https://github.com/NaveedIrfan" />
+                            {hero.socialLinks?.linkedin && <SocialIcon icon={<Linkedin size={20} />} href={hero.socialLinks.linkedin} />}
+                            {hero.socialLinks?.github && <SocialIcon icon={<Github size={20} />} href={hero.socialLinks.github} />}
                         </div>
                     </div>
                 </motion.div>
@@ -91,10 +95,10 @@ const Hero = () => {
                     }}>
                         <img
                             src="/Avatar.png"
-                            alt="Naveed Irfan"
+                            alt={hero.name}
                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                             onError={(e) => {
-                                e.target.src = "https://api.dicebear.com/7.x/avataaars/svg?seed=Naveed";
+                                e.target.src = `https://api.dicebear.com/7.x/avataaars/svg?seed=${header.firstName.trim()}`;
                             }}
                         />
                     </div>

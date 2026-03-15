@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import portfolioData from '../data/portfolioData.json';
 
 const About = () => {
+    const { about } = portfolioData;
+
     return (
         <section id="about">
             <div className="container">
@@ -19,16 +22,16 @@ const About = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <p style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginBottom: '1.5rem', fontWeight: 500 }}>
-                            I am a passionate and versatile developer with expertise in Python, Machine Learning/AI, and Web Development.
-                        </p>
-                        <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-                            I specialize in building dynamic web applications using Flask and enjoy creating efficient, scalable solutions that solve real-world problems.
-                            Additionally, I have experience with Vibe Code, enabling me to deliver interactive and engaging user experiences.
-                        </p>
-                        <p style={{ color: 'var(--text-secondary)' }}>
-                            I thrive at the intersection of data and development, combining technical skills with creativity to bring innovative ideas to life.
-                        </p>
+                        {about.description.map((paragraph, index) => (
+                            <p key={index} style={{
+                                fontSize: index === 0 ? '1.2rem' : '1rem',
+                                color: index === 0 ? 'var(--text-primary)' : 'var(--text-secondary)',
+                                marginBottom: '1.5rem',
+                                fontWeight: index === 0 ? 500 : 400
+                            }}>
+                                {paragraph}
+                            </p>
+                        ))}
                     </motion.div>
 
                     <motion.div
@@ -40,10 +43,9 @@ const About = () => {
                         style={{ padding: '3rem', position: 'relative' }}
                     >
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-                            <StatItem label="Projects" value="10+" />
-                            <StatItem label="Years Exp" value="Entry" />
-                            <StatItem label="Skills" value="12+" />
-                            <StatItem label="Design" value="UI/UX" />
+                            {about.stats.map((stat, index) => (
+                                <StatItem key={index} label={stat.label} value={stat.value} />
+                            ))}
                         </div>
 
                         {/* Background Glow */}

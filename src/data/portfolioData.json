@@ -1,0 +1,162 @@
+{
+  "header": {
+    "firstName": "Naveed",
+    "lastName": "Irfan"
+  },
+  "hero": {
+    "greeting": "Hi There,",
+    "name": "Naveed Irfan",
+    "role": "Aspiring IT Professional",
+    "description": "Building dynamic web applications and exploring the intersection of AI, Data, and Creative Design.",
+    "socialLinks": {
+      "linkedin": "https://www.linkedin.com/in/naveed-irfan-110a37251",
+      "github": "https://github.com/NaveedIrfan"
+    }
+  },
+  "about": {
+    "description": [
+      "I am a passionate and versatile developer with expertise in Python, Machine Learning/AI, and Web Development.",
+      "I specialize in building dynamic web applications using Flask and enjoy creating efficient, scalable solutions that solve real-world problems. Additionally, I have experience with Vibe Code, enabling me to deliver interactive and engaging user experiences.",
+      "I thrive at the intersection of data and development, combining technical skills with creativity to bring innovative ideas to life."
+    ],
+    "stats": [
+      {
+        "label": "Projects",
+        "value": "10+"
+      },
+      {
+        "label": "Years Exp",
+        "value": "Entry"
+      },
+      {
+        "label": "Skills",
+        "value": "12+"
+      },
+      {
+        "label": "Design",
+        "value": "UI/UX"
+      }
+    ]
+  },
+  "skills": {
+    "categories": [
+      {
+        "title": "Programming & Web",
+        "icon": "Code",
+        "skills": [
+          "Python",
+          "Flask",
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
+      },
+      {
+        "title": "AI & Machine Learning",
+        "icon": "Cpu",
+        "skills": [
+          "Machine Learning",
+          "AI Models",
+          "Data Processing"
+        ]
+      },
+      {
+        "title": "Graphics Design",
+        "icon": "Palette",
+        "skills": [
+          "Figma",
+          "Adobe Illustrator",
+          "Corel Draw",
+          "UI/UX Design"
+        ]
+      },
+      {
+        "title": "Professional Tools",
+        "icon": "Monitor",
+        "skills": [
+          "MS Office",
+          "Graphic Design",
+          "Figma",
+          "Technical Writing"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "items": [
+      {
+        "type": "education",
+        "title": "Bsc in Information Technology",
+        "organization": "University of Swat",
+        "date": "Completed",
+        "description": "Focused on core IT principles, software development, and modern technologies. Developed a strong foundation in computer science and problem-solving."
+      }
+    ]
+  },
+  "projects": {
+    "subtitle": "A collection of my recent work and creations.",
+    "items": [
+      {
+        "id": 1,
+        "title": "Web based Point of Sale System",
+        "description": "A powerful tool leveraging machine learning to extract actionable insights from raw datasets. Built with Python and robust data science libraries.",
+        "tags": [
+          "Python",
+          "Machine Learning",
+          "Data Science",
+          "Pandas"
+        ],
+        "demoLink": "",
+        "repoLink": "#"
+      },
+      {
+        "id": 2,
+        "title": "Dynamic Web Platform",
+        "description": "A responsive and intuitive web application focusing on delivering a seamless user experience. Integrates dynamic content rendering and state management.",
+        "tags": [
+          "React",
+          "JavaScript",
+          "CSS3",
+          "Vite"
+        ],
+        "demoLink": "#",
+        "repoLink": "#"
+      },
+      {
+        "id": 3,
+        "title": "Flask API Backend",
+        "description": "A scalable RESTful API built with Flask to handle complex backend operations, state management, and robust user authentication.",
+        "tags": [
+          "Python",
+          "Flask",
+          "REST API",
+          "SQLAlchemy"
+        ],
+        "demoLink": "#",
+        "repoLink": "#"
+      },
+      {
+        "id": 4,
+        "title": "Interactive Dashboard",
+        "description": "Vibe Code enabled interactive dashboard offering real-time data visualization and metrics tracking with elegant aesthetic charts.",
+        "tags": [
+          "Vibe Code",
+          "UI/UX",
+          "Data Vis"
+        ],
+        "demoLink": "#",
+        "repoLink": "#"
+      }
+    ]
+  },
+  "contact": {
+    "subtitle": "Let's discuss your next project",
+    "description": "I am currently open for new opportunities and collaborations. Feel free to reach out through any of the channels below!",
+    "info": {
+      "email": "naveedirfan890@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/naveed-irfan-110a37251",
+      "linkedinLabel": "Naveed Irfan",
+      "location": "Pakistan"
+    }
+  }
+}

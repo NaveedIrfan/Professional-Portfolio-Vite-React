@@ -20,6 +20,7 @@ Leveraging modern technologies like **React** and **Vite**, the portfolio provid
 - **Responsive Design**: Optimized for mobile, tablet, and desktop views.
 - **Interactive Hero**: Features an animated signature and custom avatar.
 - **Sectionized Content**: About Me, Technical Skills, Education, and Contact sections.
+- **Local Admin Panel**: A dynamic visual editor at `/admin` that allows you to edit all your site content locally and permanently save it to a JSON data file.
 
 ## 🛠️ Local Setup
 
@@ -48,6 +49,17 @@ To run this project locally, follow these steps:
 
 5. **Open in browser**:
    Visit [http://localhost:5173](http://localhost:5173).
+
+## 📝 Editing Your Information (Admin Panel)
+
+This portfolio now features a centralized data system. All your information (Name, Projects, Skills, etc.) is stored in `src/data/portfolioData.json`.
+
+To easily edit your information:
+1. Run the local development server (`npm run dev`).
+2. Navigate to [http://localhost:5173/admin](http://localhost:5173/admin) in your browser.
+3. Use the visual forms to update your text, add new projects, or modify your skills.
+4. Click **Save Changes**. The changes will be permanently written to your local `portfolioData.json` file!
+5. Push the updated code to deploy your changes.
 
 ## 📄 License
 

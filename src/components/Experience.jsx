@@ -2,16 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { GraduationCap, Briefcase } from 'lucide-react';
 
+import portfolioData from '../data/portfolioData.json';
+
 const Experience = () => {
-    const items = [
-        {
-            type: 'education',
-            title: 'Bsc in Information Technology',
-            organization: 'University of Swat',
-            date: 'Completed',
-            description: 'Focused on core IT principles, software development, and modern technologies. Developed a strong foundation in computer science and problem-solving.'
-        }
-    ];
+    const { experience } = portfolioData;
 
     return (
         <section id="experience">
@@ -19,7 +13,7 @@ const Experience = () => {
                 <h2 className="section-title">Education & Experience</h2>
 
                 <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-                    {items.map((item, idx) => (
+                    {experience.items.map((item, idx) => (
                         <motion.div
                             key={idx}
                             initial={{ opacity: 0, x: -20 }}
