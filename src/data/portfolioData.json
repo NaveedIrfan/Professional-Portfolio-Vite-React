@@ -26,7 +26,7 @@
       },
       {
         "label": "Years Exp",
-        "value": "Entry"
+        "value": "Intermediate"
       },
       {
         "label": "Skills",
@@ -99,53 +99,15 @@
       {
         "id": 1,
         "title": "Web based Point of Sale System",
-        "description": "A powerful tool leveraging machine learning to extract actionable insights from raw datasets. Built with Python and robust data science libraries.",
-        "tags": [
-          "Python",
-          "Machine Learning",
-          "Data Science",
-          "Pandas"
-        ],
-        "demoLink": "",
-        "repoLink": "#"
-      },
-      {
-        "id": 2,
-        "title": "Dynamic Web Platform",
-        "description": "A responsive and intuitive web application focusing on delivering a seamless user experience. Integrates dynamic content rendering and state management.",
-        "tags": [
-          "React",
-          "JavaScript",
-          "CSS3",
-          "Vite"
-        ],
-        "demoLink": "#",
-        "repoLink": "#"
-      },
-      {
-        "id": 3,
-        "title": "Flask API Backend",
-        "description": "A scalable RESTful API built with Flask to handle complex backend operations, state management, and robust user authentication.",
+        "description": "All-in-one web based POS provides advanced features such as inventory tracking, sales reports, and customer management, making it the perfect solution for any retail or restaurant establishment. With its user-friendly interface and customizable options, this point of sale system will streamline your daily operations and increase efficiency. Plus, it comes with a lifetime guarantee, ensuring that your business will benefit from the system for years to come. Upgrade your business with the \"Point of Sale System Lifetime\" and experience a new level of success. ",
         "tags": [
           "Python",
           "Flask",
-          "REST API",
-          "SQLAlchemy"
+          "sql",
+          "Html, CSS, JS"
         ],
-        "demoLink": "#",
-        "repoLink": "#"
-      },
-      {
-        "id": 4,
-        "title": "Interactive Dashboard",
-        "description": "Vibe Code enabled interactive dashboard offering real-time data visualization and metrics tracking with elegant aesthetic charts.",
-        "tags": [
-          "Vibe Code",
-          "UI/UX",
-          "Data Vis"
-        ],
-        "demoLink": "#",
-        "repoLink": "#"
+        "demoLink": "",
+        "repoLink": ""
       }
     ]
   },
